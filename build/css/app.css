@@ -131,6 +131,9 @@ img {
    position: fixed;
    width: 100%;
 }
+body.fijo{
+   overflow: hidden;
+}
 
 .header span {
    margin-bottom: 15px;
@@ -141,6 +144,11 @@ img {
 
 .header .contenido-header {
    padding: 2rem;
+}
+
+.header.fijo{
+   position: fixed;
+   width: 100%;
 }
 
 .nave-principal a {
