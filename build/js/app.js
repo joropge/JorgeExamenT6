@@ -30,12 +30,6 @@ function navFijo() {
     });
 }
 
-
-.body-scroll {
-    /* Estilos para ajustar el contenido cuando la barra de navegación es fija */
-}
-
-
 function scrollHeader() {
     const enlaces = document.querySelectorAll(".nave-principal a");
 
