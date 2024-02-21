@@ -1,22 +1,26 @@
-document.addEvenListenner("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     iniciarApp();
 });
 
 function iniciarApp() {
-    navegacionFija();
+    navFijo();
 
     crearGaleria();
 
-    scrollNav();
+    scrollHeader();
 }
 
-function navegacionFija() {
+function navFijo() {
     const barra = document.querySelector(".header");
     const video = document.querySelector(".video");
     const body = document.querySelector("body");
 
-    window.addEventListener("scroll", function() {
-        if (video.getBoundingClientRect().bottom < 0 && this.window.innerWidth >= 468) {
+    window.addEventListener("scroll", function () {
+        
+        if (
+            video.getBoundingClientRect().bottom < 0 &&
+            this.window.innerWidth >= 768
+        ) {
             barra.classList.add("fijo");
             body.classList.add("body-scroll");
         } else {
@@ -26,11 +30,17 @@ function navegacionFija() {
     });
 }
 
-function scrollNav() {
+
+.body-scroll {
+    /* Estilos para ajustar el contenido cuando la barra de navegación es fija */
+}
+
+
+function scrollHeader() {
     const enlaces = document.querySelectorAll(".nave-principal a");
 
     enlaces.forEach((enlace) => {
-        enlace.addEventListener("click", function(e) {
+        enlace.addEventListener("click", function (e) {
             e.preventDefault();
 
             const seccionScroll = e.target.attributes.href.value;
@@ -56,11 +66,11 @@ function crearGaleria() {
     }
 }
 
-function mostrarImagen(id) {
+function mostrarImagen(img) {
     const imagen = document.createElement("picture");
     imagen.innerHTML = `
-  <source srcset="build/img/big/${id}.png" type="image/png">
-  <img loading="lazy" width="200" height="300" src="build/img/big/${id}.jpg" alt="imagen galeria">
+  <source srcset="build/img/big/${img}.png" type="image/png">
+  <img loading="lazy" width="200" height="300" src="build/img/big/${img}.jpg" alt="imagen galeria">
       `;
 
     // Crea el Overlay con la imagen
