@@ -1,7 +1,54 @@
- * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: inherit;
-    font-family: inherit;
- }
+@font-face {
+   font-family: "Dinn1g";
+   src: url("/build/fonts/dinnextw1g.otf");
+   font-family: "Dinn1gBold";
+   src: url("/build/fonts/dinnextw1gbold.otf");
+}
+
+html {
+   line-height: 1.15;
+}
+
+body {
+   margin: 0;
+}
+
+main {
+   display: block;
+}
+
+h1 {
+   font-size: 2em;
+   margin: 0.67em 0;
+}
+
+pre {
+   font-family: monospace, monospace;
+   font-size: 1em;
+}
+
+a {
+   background-color: transparent;
+}
+
+img {
+   border-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+   font-family: inherit;
+   font-size: 100%;
+   line-height: 1.15;
+   margin: 0;
+}
+
+fieldset {
+   padding: 0.35em 0.75em 0.625em;
+}
+
+textarea {
+   overflow: auto;
+}
